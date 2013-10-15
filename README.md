@@ -1,4 +1,4 @@
-###
+### check-webpages-for-updates
 
 Checks urls passed to it for updates and emails user. First arg must be url to check, second must be email address to notify
 
@@ -8,7 +8,7 @@ Checks urls passed to it for updates and emails user. First arg must be url to c
 
     db_name = 'your_db_name'
 
-    server = 'your_smtp_server:your_smtp_post'
+    server = 'your_smtp_server:your_smtp_port'
     username = 'your_smtp_username'
     password = 'your_smtp_password'
     from_address = 'your_from_address'
