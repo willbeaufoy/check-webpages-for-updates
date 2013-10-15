@@ -39,7 +39,7 @@ try:
     if not prev_last_modified:
         cur.execute("INSERT INTO page (url, last_modified) VALUES (?, ?)", (url, last_modified))
         send_notification(url, page, last_modified, to_address)
-        logger.info('New page')
+        logger.info('New page encountered - notification sent to ' + to_address)
     elif last_modified > datetime.strptime(prev_last_modified[0], "%Y-%m-%d %H:%M:%S"):
         send_notification(url, page, page.headers['last-modified'], to_address)
         cur.execute("UPDATE page SET last_modified = ? WHERE url = ?", (last_modified, url))
