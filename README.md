@@ -1,5 +1,3 @@
-### check-webpages-for-updates
-
 Checks urls passed to it for updates and emails user. First arg must be url to check, second must be email address to notify
 
 #### Requires a config.py like the following + an sqlite database
