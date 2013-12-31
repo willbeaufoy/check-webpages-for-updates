@@ -4,7 +4,7 @@ Checks urls passed to it for updates and emails user. First arg must be url to c
 
     import logging
 
-    db_name = 'your_db_name'
+    db_name = 'your_db_path'
 
     server = 'your_smtp_server:your_smtp_port'
     username = 'your_smtp_username'
@@ -14,7 +14,7 @@ Checks urls passed to it for updates and emails user. First arg must be url to c
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
 
-    fh = logging.FileHandler('your_desired_log_name')
+    fh = logging.FileHandler('your_desired_log_path')
     fh.setLevel(logging.DEBUG)
 
     ch = logging.StreamHandler()

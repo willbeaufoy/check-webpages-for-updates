@@ -30,7 +30,8 @@ try:
     url = sys.argv[1]
     to_address = sys.argv[2]
     logger.info('Checking ' + url)
-    page = requests.get(url)
+    # Get the page. Leaving verify=True caused SSL errors on some sites 
+    page = requests.get(url, verify=False)
     last_modified = datetime.strptime(page.headers['last-modified'], "%a, %d %b %Y %H:%M:%S %Z")
     conn = sqlite3.connect(db_name)
     cur = conn.cursor()
